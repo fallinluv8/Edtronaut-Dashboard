@@ -73,8 +73,7 @@ Dưới đây là danh sách các yêu cầu của đề bài đã được hi�
 ### 8. Portfolio Section
 - [x] Danh sách các mô phỏng đã hoàn thành.
 - [x] Chức năng UI: "Tải chứng chỉ", "Chia sẻ LinkedIn".
-- [x] Sử dụng **Toast UI** báo thành công (thay vì alert mặc định).
-
+- [x] Sử dụng **Toast UI** báo thành công 
 ### 9. Theme & UX
 - [x] **Theme Switcher:** Chuyển đổi Light / Dark mode (lưu state bằng Context).
 - [x] **Responsive:**
@@ -83,6 +82,16 @@ Dưới đây là danh sách các yêu cầu của đề bài đã được hi�
     - Grid minmax chống vỡ UI.
     - Tối ưu tốt cho Mobile.
 
+
+## 🚀 Cài đặt và Chạy dự án
+
+Đảm bảo đã cài đặt Node.js trên máy.
+
+**1. Clone project và cài đặt dependencies:**
+pnpm install
+
+**2. Chạy môi trường Development:** 
+pnpm dev
 ---
 
 ##  Testing
