@@ -87,11 +87,9 @@ Dưới đây là danh sách các yêu cầu của đề bài đã được hi�
 
 Đảm bảo đã cài đặt Node.js trên máy.
 
-**1. Clone project và cài đặt dependencies:**
-pnpm install
+**1. Clone project và cài đặt dependencies:**pnpm install
+**2. Chạy trên môi trường development:**pnpm dev
 
-**2. Chạy môi trường Development:** 
-pnpm dev
 ---
 
 ##  Testing
