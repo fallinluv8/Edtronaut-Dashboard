@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Edtronaut Dashboard — SWE Intern Take-home Assignment
 
-## Getting Started
+> **Bài làm cho vòng Software Engineer Intern – Front-End.**
 
-First, run the development server:
+Dự án được xây dựng bằng **Next.js 15 (App Router)**, **React 19** và **Tailwind CSS**. Đây là một Dashboard mô phỏng nền tảng học tập với đầy đủ các tính năng theo dõi tiến độ, phân tích kỹ năng và gợi ý lộ trình học tập.
 
+🔗 **Live Demo:** [https://edtronaut-dashboard.vercel.app/dashboard](https://edtronaut-dashboard.vercel.app/dashboard)
+
+---
+
+##  Tech Stack
+
+Dự án sử dụng các công nghệ hiện đại nhất để đảm bảo hiệu suất, tính mở rộng và trải nghiệm người dùng tối ưu.
+
+| Công nghệ | Mục đích sử dụng |
+| :--- | :--- |
+| **Next.js 15 (App Router)** | Framework chính (Full-stack capabilities) |
+| **React 19** | UI Logic (Client & Server Components) |
+| **TypeScript** | Static typing, đảm bảo type-safe |
+| **Tailwind CSS** | Styling nhanh, nhất quán, Responsive |
+| **Context API** | Quản lý Global State (Theme, Simulation Detail) |
+| **Jest + RTL** | Unit Testing cho các component quan trọng |
+| **Date-fns** | Xử lý logic ngày tháng |
+| **Vercel Fonts (Geist)** | Typography hiện đại |
+| **Turbopack** | Dev bundler tốc độ cao |
+
+---
+
+##  Tính năng hoàn thành
+
+Dưới đây là danh sách các yêu cầu của đề bài đã được hiện thực hóa:
+
+### 1. Header Snapshot
+- [x] Hiển thị Avatar user.
+- [x] Thống kê nhanh: Minutes studied, Streak, Days studied.
+- [x] Responsive mượt mà trên mọi kích thước màn hình.
+
+### 2. Activity Summary
+- [x] Tổng hợp số phút học và ngày học.
+- [x] Tính toán Streak tự động.
+- [x] Tương thích hoàn toàn với Dark Mode.
+
+### 3. Activity Heatmap
+- [x] Heatmap dạng GitHub style.
+- [x] Grid hiển thị từ Thứ 2 → Chủ Nhật (5–6 tuần gần nhất).
+- [x] Màu sắc thay đổi theo cường độ hoạt động.
+- [x] Hỗ trợ scroll ngang trên mobile.
+- [x] Animation nhẹ cho Logo Edtronaut.
+
+### 4. Skills Section
+- [x] Hiển thị danh sách kỹ năng.
+- [x] Highlight kỹ năng đang được chọn.
+- [x] Lọc Simulation dựa theo Skill.
+- [x] Tự động tìm Skill yếu nhất (lowest score).
+
+### 5. Recommendation Engine
+- [x] Hệ thống gợi ý dựa trên **Weakest Skill**.
+- [x] Kết hợp gợi ý cả Simulation và Job relevant.
+- [x] Giải thích ngữ cảnh "Tại sao được gợi ý".
+- [x] Giới hạn hiển thị tối đa 5 items với unique keys.
+
+### 6. Simulation Section
+- [x] Phân chia 3 trạng thái: **Đang làm**, **Hoàn thành**, **Chưa bắt đầu**.
+- [x] Accordion có thể Collapse / Expand.
+- [x] Hiển thị số lượng bài tập từng nhóm.
+- [x] Card thông tin chi tiết: Progress, Last Activity, Difficulty.
+
+### 7. Simulation Detail Drawer
+- [x] Panel trượt (Drawer) khi click vào Simulation Card.
+- [x] Hiển thị chi tiết: Title, Company, Role, Difficulty, Skills, Timeline steps.
+- [x] Hỗ trợ nút đóng và Dark mode.
+
+### 8. Portfolio Section
+- [x] Danh sách các mô phỏng đã hoàn thành.
+- [x] Chức năng UI: "Tải chứng chỉ", "Chia sẻ LinkedIn".
+- [x] Sử dụng **Toast UI** báo thành công (thay vì alert mặc định).
+
+### 9. Theme & UX
+- [x] **Theme Switcher:** Chuyển đổi Light / Dark mode (lưu state bằng Context).
+- [x] **Responsive:**
+    - Cột phải (Recommendations) sticky trên desktop.
+    - Cột trái scroll độc lập.
+    - Grid minmax chống vỡ UI.
+    - Tối ưu tốt cho Mobile.
+
+---
+
+##  Testing
+
+Dự án đã thiết lập môi trường test với **Jest** và **React Testing Library**. Các file test bao gồm:
+1.  `RecommendationCard.test.tsx`
+2.  `useRecommendations.test.ts`
+3.  `filterSimulations.test.ts`
+
+Để chạy test:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+pnpm test
